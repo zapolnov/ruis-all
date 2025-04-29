@@ -1,0 +1,68 @@
+[submodule "ruis"]
+	path = ruis
+	url = ../ruis
+	branch = main
+[submodule "utki"]
+	path = utki
+	url = ../utki
+	branch = main
+[submodule "ruis-render-null"]
+	path = ruis-render-null
+	url = ../ruis-render-null
+	branch = main
+[submodule "ruisapp"]
+	path = ruisapp
+	url = ../ruisapp
+	branch = main
+[submodule "tool-configs"]
+	path = tool-configs
+	url = ../tool-configs
+	branch = main
+[submodule "ruis-render-opengl"]
+	path = ruis-render-opengl
+	url = ../ruis-render-opengl
+	branch = main
+[submodule "ruis-render-opengles"]
+	path = ruis-render-opengles
+	url = ../ruis-render-opengles
+	branch = main
+[submodule "papki"]
+	path = papki
+	url = ../papki
+	branch = main
+[submodule "r4"]
+	path = r4
+	url = ../r4
+	branch = main
+[submodule "tml"]
+	path = tml
+	url = ../tml
+	branch = main
+[submodule "rasterimage"]
+	path = rasterimage
+	url = ../rasterimage
+	branch = main
+[submodule "veg"]
+	path = veg
+	url = ../veg
+	branch = main
+[submodule "agg"]
+	path = agg
+	url = ../agg
+	branch = main
+[submodule "svgren"]
+	path = svgren
+	url = ../svgren
+	branch = main
+[submodule "svgdom"]
+	path = svgdom
+	url = ../svgdom
+	branch = main
+[submodule "mikroxml"]
+	path = mikroxml
+	url = ../mikroxml
+	branch = main
+[submodule "cssom"]
+	path = cssom
+	url = ../cssom
+	branch = main

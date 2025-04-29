@@ -1,0 +1,88 @@
+@echo off
+
+git submodule update --init --recursive || exit /B 1
+
+if exist "%~dp0_build\vcpkg\vcpkg.exe" goto skip2
+if exist "%~dp0_build\vcpkg" goto skip
+git clone --depth=1 https://github.com/microsoft/vcpkg.git _build\vcpkg || exit /B 1
+:skip
+cd "%~dp0_build\vcpkg" || exit /B 1
+call bootstrap-vcpkg.bat || exit /B 1
+:skip2
+
+"%~dp0_build\vcpkg\vcpkg.exe" install ^
+    zlib:x64-windows ^
+    libpng:x64-windows ^
+    ijg-libjpeg:x64-windows ^
+    freetype:x64-windows ^
+    || exit /B 1
+
+cd "%~dp0agg" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/agg
+
+cd "%~dp0cssom" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/cssom
+
+cd "%~dp0mikroxml" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/mikroxml
+
+cd "%~dp0papki" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/papki
+
+cd "%~dp0r4" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/r4
+
+cd "%~dp0rasterimage" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/rasterimage
+
+cd "%~dp0ruis" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/ruis
+
+cd "%~dp0ruis-render-null" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/ruis-render-null
+
+cd "%~dp0ruis-render-opengl" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/ruis-render-opengl
+
+cd "%~dp0ruis-render-opengles" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/ruis-render-opengles
+
+cd "%~dp0ruisapp" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/ruisapp
+
+cd "%~dp0svgdom" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/svgdom
+
+cd "%~dp0svgren" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/svgren
+
+cd "%~dp0tml" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/tml
+
+cd "%~dp0tool-configs" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/tool-configs
+
+cd "%~dp0utki" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/utki
+
+cd "%~dp0veg" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/veg
+
+cd "%~dp0" || exit /B 1
