@@ -14,8 +14,16 @@ call bootstrap-vcpkg.bat || exit /B 1
     zlib:x64-windows ^
     libpng:x64-windows ^
     ijg-libjpeg:x64-windows ^
+    glew:x64-windows ^
     freetype:x64-windows ^
     || exit /B 1
+
+if not exist "%~dp0_build\vcpkg\packages\glew_x64-windows\lib\glew32s.lib" (
+    copy /b "%~dp0_build\vcpkg\packages\glew_x64-windows\lib\glew32.lib" "%~dp0_build\vcpkg\packages\glew_x64-windows\lib\glew32s.lib"
+)
+if not exist "%~dp0_build\vcpkg\packages\glew_x64-windows\lib\glew32ds.lib" (
+    copy /b "%~dp0_build\vcpkg\packages\glew_x64-windows\lib\glew32.lib" "%~dp0_build\vcpkg\packages\glew_x64-windows\lib\glew32ds.lib"
+)
 
 cd "%~dp0agg" || exit /B 1
 git checkout main || exit /B 1
