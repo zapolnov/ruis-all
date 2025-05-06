@@ -8,6 +8,14 @@ git fetch upstream || exit /B 1
 git merge upstream/main || exit /B 1
 git push origin main || exit /B 1
 
+echo ==== carcockpit
+cd "%~dp0carcockpit" || exit /B 1
+git checkout main || exit /B 1
+git pull origin main || exit /B 1
+git fetch upstream || exit /B 1
+git merge upstream/main || exit /B 1
+git push origin main || exit /B 1
+
 echo ==== clargs
 cd "%~dp0clargs" || exit /B 1
 git checkout main || exit /B 1

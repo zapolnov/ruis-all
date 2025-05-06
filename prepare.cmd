@@ -16,6 +16,7 @@ call bootstrap-vcpkg.bat || exit /B 1
     ijg-libjpeg:x64-windows ^
     glew:x64-windows ^
     freetype:x64-windows ^
+    angle:x64-windows ^
     || exit /B 1
 
 if not exist "%~dp0_build\vcpkg\packages\glew_x64-windows\lib\glew32s.lib" (
@@ -28,6 +29,10 @@ if not exist "%~dp0_build\vcpkg\packages\glew_x64-windows\lib\glew32ds.lib" (
 cd "%~dp0agg" || exit /B 1
 git checkout main || exit /B 1
 git remote add upstream git@github.com:cppfw/agg
+
+cd "%~dp0carcockpit" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:gagistech/carcockpit
 
 cd "%~dp0clargs" || exit /B 1
 git checkout main || exit /B 1

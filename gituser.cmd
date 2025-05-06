@@ -7,6 +7,10 @@ cd "%~dp0agg" || exit /B 1
 git config user.name "Nikolay Zapolnov" || exit /B 1
 git config user.email "zapolnov@gmail.com" || exit /B 1
 
+cd "%~dp0carcockpit" || exit /B 1
+git config user.name "Nikolay Zapolnov" || exit /B 1
+git config user.email "zapolnov@gmail.com" || exit /B 1
+
 cd "%~dp0clargs" || exit /B 1
 git config user.name "Nikolay Zapolnov" || exit /B 1
 git config user.email "zapolnov@gmail.com" || exit /B 1

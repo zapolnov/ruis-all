@@ -20,6 +20,7 @@ set(SVGDOM_DISABLE_INSTALL TRUE)
 set(SVGREN_DISABLE_INSTALL TRUE)
 set(RUIS_DISABLE_INSTALL TRUE)
 set(RUIS_RENDER_OPENGL_DISABLE_INSTALL TRUE)
+set(RUIS_RENDER_OPENGLES_DISABLE_INSTALL TRUE)
 set(RUISAPP_DISABLE_INSTALL TRUE)
 
 add_subdirectory(agg/build/cmake)
@@ -73,7 +74,13 @@ add_library(ruis::ruis ALIAS ruis)
 add_subdirectory(ruis-render-opengl/build/cmake)
 add_library(ruis-render-opengl::ruis-render-opengl ALIAS ruis-render-opengl)
 
+add_subdirectory(ruis-render-opengles/build/cmake)
+add_library(ruis-render-opengles::ruis-render-opengles ALIAS ruis-render-opengles)
+
 add_subdirectory(ruisapp/build/cmake)
 add_library(ruisapp::ruisapp ALIAS ruisapp)
 
-set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ruisapp-test)
+add_subdirectory(carcockpit/build/cmake)
+
+#set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ruisapp-test)
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT carcockpit)

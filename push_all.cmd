@@ -4,6 +4,10 @@ echo ==== agg
 cd "%~dp0agg" || exit /B 1
 git push origin main || exit /B 1
 
+echo ==== carcockpit
+cd "%~dp0carcockpit" || exit /B 1
+git push origin main || exit /B 1
+
 echo ==== clargs
 cd "%~dp0clargs" || exit /B 1
 git push origin main || exit /B 1

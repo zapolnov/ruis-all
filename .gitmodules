@@ -82,3 +82,7 @@
 	path = opros
 	url = ../opros
 	branch = main
+[submodule "carcockpit"]
+	path = carcockpit
+	url = ../carcockpit
+	branch = main

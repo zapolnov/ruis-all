@@ -5,6 +5,11 @@ cd "%~dp0agg\build\tool-configs" || exit /B 1
 git checkout main || exit /B 1
 git pull origin main || exit /B 1
 
+echo ==== carcockpit
+cd "%~dp0carcockpit\tool-configs" || exit /B 1
+git checkout main || exit /B 1
+git pull origin main || exit /B 1
+
 echo ==== clargs
 cd "%~dp0clargs\tool-configs" || exit /B 1
 git checkout main || exit /B 1
