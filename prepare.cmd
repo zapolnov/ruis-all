@@ -94,3 +94,18 @@ git checkout main || exit /B 1
 git remote add upstream git@github.com:cppfw/veg
 
 cd "%~dp0" || exit /B 1
+
+if not exist "%~dp0_build\msvc2022\ruisapp\cmake\Debug" mkdir "%~dp0_build\msvc2022\ruisapp\cmake\Debug"
+if not exist "%~dp0_build\msvc2022\ruisapp\cmake\MinSizeRel" mkdir "%~dp0_build\msvc2022\ruisapp\cmake\MinSizeRel"
+if not exist "%~dp0_build\msvc2022\ruisapp\cmake\Release" mkdir "%~dp0_build\msvc2022\ruisapp\cmake\Release"
+if not exist "%~dp0_build\msvc2022\ruisapp\cmake\RelWithDebInfo" mkdir "%~dp0_build\msvc2022\ruisapp\cmake\RelWithDebInfo"
+
+copy /b "%~dp0_build\vcpkg\packages\libpng_x64-windows\bin\libpng16.dll" "%~dp0_build\msvc2022\ruisapp\cmake\Debug" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\libpng_x64-windows\bin\libpng16.dll" "%~dp0_build\msvc2022\ruisapp\cmake\MinSizeRel" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\libpng_x64-windows\bin\libpng16.dll" "%~dp0_build\msvc2022\ruisapp\cmake\RelWithDebInfo" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\libpng_x64-windows\bin\libpng16.dll" "%~dp0_build\msvc2022\ruisapp\cmake\Release" || exit /B 1
+
+copy /b "%~dp0_build\vcpkg\packages\glew_x64-windows\bin\glew32.dll" "%~dp0_build\msvc2022\ruisapp\cmake\Debug" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\glew_x64-windows\bin\glew32.dll" "%~dp0_build\msvc2022\ruisapp\cmake\MinSizeRel" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\glew_x64-windows\bin\glew32.dll" "%~dp0_build\msvc2022\ruisapp\cmake\RelWithDebInfo" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\glew_x64-windows\bin\glew32.dll" "%~dp0_build\msvc2022\ruisapp\cmake\Release" || exit /B 1
