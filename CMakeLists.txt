@@ -75,3 +75,5 @@ add_library(ruis-render-opengl::ruis-render-opengl ALIAS ruis-render-opengl)
 
 add_subdirectory(ruisapp/build/cmake)
 add_library(ruisapp::ruisapp ALIAS ruisapp)
+
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ruisapp-test)
