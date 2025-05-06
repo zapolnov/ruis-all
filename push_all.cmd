@@ -1,10 +1,11 @@
 @echo off
 
-cd "%~dp0" || exit /B 1
-git push origin main || exit /B 1
-
 echo ==== agg
 cd "%~dp0agg" || exit /B 1
+git push origin main || exit /B 1
+
+echo ==== clargs
+cd "%~dp0clargs" || exit /B 1
 git push origin main || exit /B 1
 
 echo ==== cssom
@@ -13,6 +14,14 @@ git push origin main || exit /B 1
 
 echo ==== mikroxml
 cd "%~dp0mikroxml" || exit /B 1
+git push origin main || exit /B 1
+
+echo ==== nitki
+cd "%~dp0nitki" || exit /B 1
+git push origin main || exit /B 1
+
+echo ==== opros
+cd "%~dp0opros" || exit /B 1
 git push origin main || exit /B 1
 
 echo ==== papki
@@ -63,10 +72,18 @@ echo ==== tool-configs
 cd "%~dp0tool-configs" || exit /B 1
 git push origin main || exit /B 1
 
+echo ==== tst
+cd "%~dp0tst" || exit /B 1
+git push origin main || exit /B 1
+
 echo ==== utki
 cd "%~dp0utki" || exit /B 1
 git push origin main || exit /B 1
 
 echo ==== veg
 cd "%~dp0veg" || exit /B 1
+git push origin main || exit /B 1
+
+echo ==== (root)
+cd "%~dp0" || exit /B 1
 git push origin main || exit /B 1

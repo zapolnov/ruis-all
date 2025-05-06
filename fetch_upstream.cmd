@@ -8,6 +8,14 @@ git fetch upstream || exit /B 1
 git merge upstream/main || exit /B 1
 git push origin main || exit /B 1
 
+echo ==== clargs
+cd "%~dp0clargs" || exit /B 1
+git checkout main || exit /B 1
+git pull origin main || exit /B 1
+git fetch upstream || exit /B 1
+git merge upstream/main || exit /B 1
+git push origin main || exit /B 1
+
 echo ==== cssom
 cd "%~dp0cssom" || exit /B 1
 git checkout main || exit /B 1
@@ -18,6 +26,22 @@ git push origin main || exit /B 1
 
 echo ==== mikroxml
 cd "%~dp0mikroxml" || exit /B 1
+git checkout main || exit /B 1
+git pull origin main || exit /B 1
+git fetch upstream || exit /B 1
+git merge upstream/main || exit /B 1
+git push origin main || exit /B 1
+
+echo ==== nitki
+cd "%~dp0nitki" || exit /B 1
+git checkout main || exit /B 1
+git pull origin main || exit /B 1
+git fetch upstream || exit /B 1
+git merge upstream/main || exit /B 1
+git push origin main || exit /B 1
+
+echo ==== opros
+cd "%~dp0opros" || exit /B 1
 git checkout main || exit /B 1
 git pull origin main || exit /B 1
 git fetch upstream || exit /B 1
@@ -114,6 +138,14 @@ git push origin main || exit /B 1
 
 echo ==== tool-configs
 cd "%~dp0tool-configs" || exit /B 1
+git checkout main || exit /B 1
+git pull origin main || exit /B 1
+git fetch upstream || exit /B 1
+git merge upstream/main || exit /B 1
+git push origin main || exit /B 1
+
+echo ==== tst
+cd "%~dp0tst" || exit /B 1
 git checkout main || exit /B 1
 git pull origin main || exit /B 1
 git fetch upstream || exit /B 1

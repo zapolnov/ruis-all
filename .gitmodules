@@ -66,3 +66,19 @@
 	path = cssom
 	url = ../cssom
 	branch = main
+[submodule "tst"]
+	path = tst
+	url = ../tst
+	branch = main
+[submodule "clargs"]
+	path = clargs
+	url = ../clargs
+	branch = main
+[submodule "nitki"]
+	path = nitki
+	url = ../nitki
+	branch = main
+[submodule "opros"]
+	path = opros
+	url = ../opros
+	branch = main

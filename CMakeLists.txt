@@ -1,8 +1,14 @@
 cmake_minimum_required(VERSION 3.30)
 project(RuisAll)
 
+include(tool-configs/cmake/common.cmake)
+
 set(AGG_DISABLE_INSTALL TRUE)
 set(UTKI_DISABLE_INSTALL TRUE)
+set(CLARGS_DISABLE_INSTALL TRUE)
+set(OPROS_DISABLE_INSTALL TRUE)
+set(NITKI_DISABLE_INSTALL TRUE)
+set(TST_DISABLE_INSTALL TRUE)
 set(PAPKI_DISABLE_INSTALL TRUE)
 set(R4_DISABLE_INSTALL TRUE)
 set(TML_DISABLE_INSTALL TRUE)
@@ -21,6 +27,18 @@ add_library(agg::agg ALIAS agg)
 
 add_subdirectory(utki/build/cmake)
 add_library(utki::utki ALIAS utki)
+
+add_subdirectory(clargs/build/cmake)
+add_library(clargs::clargs ALIAS clargs)
+
+add_subdirectory(opros/build/cmake)
+add_library(opros::opros ALIAS opros)
+
+add_subdirectory(nitki/build/cmake)
+add_library(nitki::nitki ALIAS nitki)
+
+add_subdirectory(tst/build/cmake)
+add_library(tst::tst ALIAS tst)
 
 add_subdirectory(papki/build/cmake)
 add_library(papki::papki ALIAS papki)

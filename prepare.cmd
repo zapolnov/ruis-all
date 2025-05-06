@@ -29,6 +29,10 @@ cd "%~dp0agg" || exit /B 1
 git checkout main || exit /B 1
 git remote add upstream git@github.com:cppfw/agg
 
+cd "%~dp0clargs" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/clargs
+
 cd "%~dp0cssom" || exit /B 1
 git checkout main || exit /B 1
 git remote add upstream git@github.com:cppfw/cssom
@@ -36,6 +40,14 @@ git remote add upstream git@github.com:cppfw/cssom
 cd "%~dp0mikroxml" || exit /B 1
 git checkout main || exit /B 1
 git remote add upstream git@github.com:cppfw/mikroxml
+
+cd "%~dp0nitki" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/nitki
+
+cd "%~dp0opros" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/opros
 
 cd "%~dp0papki" || exit /B 1
 git checkout main || exit /B 1
@@ -84,6 +96,10 @@ git remote add upstream git@github.com:cppfw/tml
 cd "%~dp0tool-configs" || exit /B 1
 git checkout main || exit /B 1
 git remote add upstream git@github.com:cppfw/tool-configs
+
+cd "%~dp0tst" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/tst
 
 cd "%~dp0utki" || exit /B 1
 git checkout main || exit /B 1
