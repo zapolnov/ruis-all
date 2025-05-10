@@ -19,6 +19,10 @@ cd "%~dp0cssom" || exit /B 1
 git config user.name "Nikolay Zapolnov" || exit /B 1
 git config user.email "zapolnov@gmail.com" || exit /B 1
 
+cd "%~dp0jsondom" || exit /B 1
+git config user.name "Nikolay Zapolnov" || exit /B 1
+git config user.email "zapolnov@gmail.com" || exit /B 1
+
 cd "%~dp0mikroxml" || exit /B 1
 git config user.name "Nikolay Zapolnov" || exit /B 1
 git config user.email "zapolnov@gmail.com" || exit /B 1

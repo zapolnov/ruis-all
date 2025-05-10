@@ -14,6 +14,7 @@ set(R4_DISABLE_INSTALL TRUE)
 set(TML_DISABLE_INSTALL TRUE)
 set(MIKROXML_DISABLE_INSTALL TRUE)
 set(CSSOM_DISABLE_INSTALL TRUE)
+set(JSONDOM_DISABLE_INSTALL TRUE)
 set(RASTERIMAGE_DISABLE_INSTALL TRUE)
 set(VEG_DISABLE_INSTALL TRUE)
 set(SVGDOM_DISABLE_INSTALL TRUE)
@@ -56,6 +57,9 @@ add_library(mikroxml::mikroxml ALIAS mikroxml)
 add_subdirectory(cssom/build/cmake)
 add_library(cssom::cssom ALIAS cssom)
 
+add_subdirectory(jsondom/build/cmake)
+add_library(jsondom::jsondom ALIAS jsondom)
+
 add_subdirectory(rasterimage/build/cmake)
 add_library(rasterimage::rasterimage ALIAS rasterimage)
 
@@ -78,7 +82,8 @@ add_subdirectory(ruis-render-opengles/build/cmake)
 add_library(ruis-render-opengles::ruis-render-opengles ALIAS ruis-render-opengles)
 
 add_subdirectory(ruisapp/build/cmake)
-add_library(ruisapp::ruisapp ALIAS ruisapp)
+add_library(ruisapp-opengl::ruisapp-opengl ALIAS ruisapp-opengl)
+add_library(ruisapp-opengles::ruisapp-opengles ALIAS ruisapp-opengles)
 
 add_subdirectory(carcockpit/build/cmake)
 

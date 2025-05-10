@@ -17,6 +17,7 @@ call bootstrap-vcpkg.bat || exit /B 1
     glew:x64-windows ^
     freetype:x64-windows ^
     angle:x64-windows ^
+    egl-registry:x64-windows ^
     || exit /B 1
 
 if not exist "%~dp0_build\vcpkg\packages\glew_x64-windows\lib\glew32s.lib" (
@@ -41,6 +42,10 @@ git remote add upstream git@github.com:cppfw/clargs
 cd "%~dp0cssom" || exit /B 1
 git checkout main || exit /B 1
 git remote add upstream git@github.com:cppfw/cssom
+
+cd "%~dp0jsondom" || exit /B 1
+git checkout main || exit /B 1
+git remote add upstream git@github.com:cppfw/jsondom
 
 cd "%~dp0mikroxml" || exit /B 1
 git checkout main || exit /B 1
@@ -120,6 +125,36 @@ if not exist "%~dp0_build\msvc2022\_exe\Debug" mkdir "%~dp0_build\msvc2022\_exe\
 if not exist "%~dp0_build\msvc2022\_exe\MinSizeRel" mkdir "%~dp0_build\msvc2022\_exe\MinSizeRel"
 if not exist "%~dp0_build\msvc2022\_exe\Release" mkdir "%~dp0_build\msvc2022\_exe\Release"
 if not exist "%~dp0_build\msvc2022\_exe\RelWithDebInfo" mkdir "%~dp0_build\msvc2022\_exe\RelWithDebInfo"
+
+copy /b "%~dp0_build\vcpkg\packages\angle_x64-windows\bin\libGLESv2.dll" "%~dp0_build\msvc2022\_exe\Debug" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\angle_x64-windows\bin\libGLESv2.dll" "%~dp0_build\msvc2022\_exe\MinSizeRel" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\angle_x64-windows\bin\libGLESv2.dll" "%~dp0_build\msvc2022\_exe\RelWithDebInfo" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\angle_x64-windows\bin\libGLESv2.dll" "%~dp0_build\msvc2022\_exe\Release" || exit /B 1
+
+copy /b "%~dp0_build\vcpkg\packages\angle_x64-windows\bin\libEGL.dll" "%~dp0_build\msvc2022\_exe\Debug" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\angle_x64-windows\bin\libEGL.dll" "%~dp0_build\msvc2022\_exe\MinSizeRel" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\angle_x64-windows\bin\libEGL.dll" "%~dp0_build\msvc2022\_exe\RelWithDebInfo" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\angle_x64-windows\bin\libEGL.dll" "%~dp0_build\msvc2022\_exe\Release" || exit /B 1
+
+copy /b "%~dp0_build\vcpkg\packages\freetype_x64-windows\bin\freetype.dll" "%~dp0_build\msvc2022\_exe\Debug" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\freetype_x64-windows\bin\freetype.dll" "%~dp0_build\msvc2022\_exe\MinSizeRel" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\freetype_x64-windows\bin\freetype.dll" "%~dp0_build\msvc2022\_exe\RelWithDebInfo" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\freetype_x64-windows\bin\freetype.dll" "%~dp0_build\msvc2022\_exe\Release" || exit /B 1
+
+copy /b "%~dp0_build\vcpkg\packages\bzip2_x64-windows\bin\bz2.dll" "%~dp0_build\msvc2022\_exe\Debug" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\bzip2_x64-windows\bin\bz2.dll" "%~dp0_build\msvc2022\_exe\MinSizeRel" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\bzip2_x64-windows\bin\bz2.dll" "%~dp0_build\msvc2022\_exe\RelWithDebInfo" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\bzip2_x64-windows\bin\bz2.dll" "%~dp0_build\msvc2022\_exe\Release" || exit /B 1
+
+copy /b "%~dp0_build\vcpkg\packages\brotli_x64-windows\bin\brotlicommon.dll" "%~dp0_build\msvc2022\_exe\Debug" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\brotli_x64-windows\bin\brotlicommon.dll" "%~dp0_build\msvc2022\_exe\MinSizeRel" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\brotli_x64-windows\bin\brotlicommon.dll" "%~dp0_build\msvc2022\_exe\RelWithDebInfo" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\brotli_x64-windows\bin\brotlicommon.dll" "%~dp0_build\msvc2022\_exe\Release" || exit /B 1
+
+copy /b "%~dp0_build\vcpkg\packages\brotli_x64-windows\bin\brotlidec.dll" "%~dp0_build\msvc2022\_exe\Debug" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\brotli_x64-windows\bin\brotlidec.dll" "%~dp0_build\msvc2022\_exe\MinSizeRel" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\brotli_x64-windows\bin\brotlidec.dll" "%~dp0_build\msvc2022\_exe\RelWithDebInfo" || exit /B 1
+copy /b "%~dp0_build\vcpkg\packages\brotli_x64-windows\bin\brotlidec.dll" "%~dp0_build\msvc2022\_exe\Release" || exit /B 1
 
 copy /b "%~dp0_build\vcpkg\packages\libpng_x64-windows\bin\libpng16.dll" "%~dp0_build\msvc2022\_exe\Debug" || exit /B 1
 copy /b "%~dp0_build\vcpkg\packages\libpng_x64-windows\bin\libpng16.dll" "%~dp0_build\msvc2022\_exe\MinSizeRel" || exit /B 1

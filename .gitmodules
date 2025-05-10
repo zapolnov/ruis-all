@@ -86,3 +86,7 @@
 	path = carcockpit
 	url = ../carcockpit
 	branch = main
+[submodule "jsondom"]
+	path = jsondom
+	url = ../jsondom
+	branch = main

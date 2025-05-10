@@ -20,4 +20,6 @@ cmake ^
     "-DGLEW_LIBRARY=%pkg%\glew_x64-windows\lib\glew32.lib" ^
     "-DFREETYPE_INCLUDE_DIRS=%pkg%\freetype_x64-windows\include" ^
     "-DFREETYPE_LIBRARY=%pkg%\freetype_x64-windows\lib\freetype.lib" ^
+    "-DCMAKE_PREFIX_PATH=%pkg%\angle_x64-windows\share\unofficial-angle" ^
+    "-DEGL_INCLUDE_DIR=%pkg%\egl-registry_x64-windows\include" ^
     "%dir%" || exit /B 1

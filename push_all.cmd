@@ -16,6 +16,10 @@ echo ==== cssom
 cd "%~dp0cssom" || exit /B 1
 git push origin main || exit /B 1
 
+echo ==== jsondom
+cd "%~dp0jsondom" || exit /B 1
+git push origin main || exit /B 1
+
 echo ==== mikroxml
 cd "%~dp0mikroxml" || exit /B 1
 git push origin main || exit /B 1

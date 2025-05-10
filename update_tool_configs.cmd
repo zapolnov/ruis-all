@@ -20,6 +20,11 @@ cd "%~dp0cssom\tool-configs" || exit /B 1
 git checkout main || exit /B 1
 git pull origin main || exit /B 1
 
+echo ==== jsondom
+cd "%~dp0jsondom\tool-configs" || exit /B 1
+git checkout main || exit /B 1
+git pull origin main || exit /B 1
+
 echo ==== mikroxml
 cd "%~dp0mikroxml\tool-configs" || exit /B 1
 git checkout main || exit /B 1
