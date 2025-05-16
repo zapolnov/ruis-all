@@ -32,6 +32,8 @@ git fetch upstream || exit /B 1
 git merge upstream/main || exit /B 1
 git push origin main || exit /B 1
 
+:x
+
 echo ==== jsondom
 cd "%~dp0jsondom" || exit /B 1
 git checkout main || exit /B 1
